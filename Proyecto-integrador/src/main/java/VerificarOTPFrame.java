@@ -32,14 +32,12 @@ public class VerificarOTPFrame extends JFrame {
 
 	private void validarCodigo() {
 		try (Connection conn = ConexionBD.obtenerConexion()) {
-			// Llamada al procedimiento VALIDATE_OTP
 			CallableStatement cs = conn.prepareCall("{call VALIDATE_OTP(?, ?)}");
 			cs.setInt(1, userId);
 			cs.setString(2, txtOTP.getText());
 
 			cs.execute();
 
-			// Si no hay excepción el procedimiento funcionó correctamente
 			JOptionPane.showMessageDialog(this, "¡Cuenta verificada! Ya puedes iniciar sesión.");
 			this.dispose();
 
