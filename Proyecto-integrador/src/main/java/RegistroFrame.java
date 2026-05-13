@@ -54,7 +54,7 @@ public class RegistroFrame extends JFrame {
         btnRegistrar.setFont(new Font("SansSerif", Font.BOLD, 14));
         btnRegistrar.setCursor(new Cursor(Cursor.HAND_CURSOR));
         
-        // Estética del botón sólido
+       
         btnRegistrar.setOpaque(true);
         btnRegistrar.setBorderPainted(false);
         btnRegistrar.setFocusPainted(false);
